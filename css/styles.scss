@@ -18,3 +18,44 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+
+
+
+.site-header {
+  background: #22201e; /* hvid baggrund */
+  border-bottom: 1px solid #E6E1D8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px; /* justér størrelsen på dit logo */
+  display: block;
+}
+
+.menu a {
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.menu a:hover {
+  color: #b1a79e; /* olivengrøn accent */
+}
+
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
