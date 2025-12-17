@@ -3,6 +3,9 @@
 
 // 2. Include any default variable overrides here
 $link-decoration: none;
+$primary: #3a3734;
+$secondary: #aaa198;
+
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
@@ -18,7 +21,12 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+  /* Baggrundsfarve på hele siden */
+body
+{   background-color:#b1a79e;
+}
 
+ /* Header med logo og navigation */
 .site-header {
   background: #22211f; /* hvid baggrund */
   border-bottom: 1px solid #b1a79e;
@@ -26,7 +34,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   top: 0;
   z-index: 10;
 }
-
+   /* Navigation container */
 .nav {
   max-width: 1100px;
   margin: 0 auto;
@@ -49,7 +57,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 .menu a:hover {
-  color: #dcdcdc; /* olivengrøn accent */
+  color: #dcdcdc;
 }
 
 .hero-image img {
@@ -59,14 +67,15 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   display: block;
 }
 
+ /* Hero-billede */
 .intro-box {
   background: #b1a79e; /* lys beige baggrund */
   padding: 60px 20px;
   text-align: center;
 }
-
+   /* Intro-boks med tekst */
 .intro-box h1 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   margin-bottom: 16px;
   color: #1E1E1E;
 }
@@ -78,6 +87,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   color: #333;
 }
 
+.intro-box h2{
+  font-size: x-large;
+}
+
+  /* Primær knap */
 .btn.primary {
   background: #3a3734;
   color: #fff;
@@ -112,3 +126,109 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   position: relative;
 }
 
+
+.carousel {
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  margin: 40px auto; /* afstand og centrering */
+  border-radius: 10px;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 24s infinite;
+}
+.slides img:nth-child(1) { animation-delay: 0s; }
+.slides img:nth-child(2) { animation-delay: 3s; }
+.slides img:nth-child(3) { animation-delay: 6s; }
+.slides img:nth-child(4) { animation-delay: 9s; }
+
+
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+}
+
+
+
+
+ /* Kort med glød-effekt */
+ .card-glow {
+
+     background: linear-gradient(135deg, #b1a79e, #3a3734);
+
+     color: #ffffff;
+
+     border-radius: 20px;
+
+     box-shadow: 0 10px 20px rgb(220, 220, 220);
+
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+ }
+
+
+
+ .card-glow:hover {
+
+     transform: translateY(-5px);
+
+     box-shadow: 0 15px 30px rgb(255, 255, 255);
+
+ }
+
+
+
+ .card-glow .card-body {
+
+     padding: 2rem;
+
+ }
+
+
+ .card-glow {
+   margin-bottom: 100px;
+ }
+
+
+
+
+
+
+footer {
+
+     background-color: #3a3734;
+
+     color: #fff;
+
+     padding: 3rem 0;
+   
+ }
+
+
+ @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+
+ .contact3 {
+
+   font-family: "Montserrat", sans-serif;
+
+   color: #22211f;
+
+   font-weight: 300;
+
+ }
