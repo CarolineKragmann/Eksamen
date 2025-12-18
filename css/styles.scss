@@ -22,8 +22,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // 5. Du kan lave styling her...
   /* Baggrundsfarve på hele siden */
-body
-{   background-color:#b1a79e;
+body {
+  background-color:#b1a79e;
 }
 
  /* Header med logo og navigation */
